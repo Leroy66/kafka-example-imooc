@@ -21,10 +21,7 @@ public class SimpleProducer {
     }
 
     public void send(String topic, String key, MessageEntity entity) {
-        ProducerRecord<String, MessageEntity> record = new ProducerRecord<>(
-                topic,
-                key,
-                entity);
+        ProducerRecord<String, MessageEntity> record = new ProducerRecord<>(topic, key, entity);
 
         long startTime = System.currentTimeMillis();
 
